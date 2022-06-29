@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [att="abc"]{
+            color: red;
+        }
+        /* ~属性值中里面有空格分割 有对应的值*/
+        [att~="b"]{
+            background-color: #8a6d3b;
+        }
+        [att]{
+            color: blue;
+        }
+
+        /* 以 - 把属性值进行分割有对应的值*/
+        [att|="a"]{
+            background-color: #761c19;
+        }
+        [att*="c"]{
+            color: yellow;
+        }
+        /*属性的值是以my开头的*/
+        [att^="r"]{
+            color: pink;
+        }
+        /*属性的值是以a结尾的*/
+        [att$="c"]{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<h4>我是一个标题4号</h4>
+<div att="rr">我是一个div</div>
+<span att="abc">我是一个span01</span><br>
+<span class="rr">我是一个span02</span>
+<h4 att="abc">我是大冤钟</h4>
+</body>
+</html>
