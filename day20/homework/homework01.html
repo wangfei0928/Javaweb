@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--定义一个函数，接收一个数值类型数组参数，函数功能为找出传入数组中的最大值元素，并返回-->
+    <script>
+        function findMaxNum(array) {
+            var max = Math.max.apply(null,array);
+            console.log(max);
+        }
+        findMaxNum([324,213,523,62,51,99]);
+
+        function findMaxNum2(array){
+            var max = array[0];
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            console.log(max);
+        }
+        findMaxNum2([324,213,523,62,51,99]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

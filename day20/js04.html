@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    var cars = ["奔驰","宝马","保时捷"];
+    cars.push("法拉利");
+    cars.push("丰田","现代");
+    console.log(cars);
+    cars.pop();
+    console.log(cars);
+    cars.unshift("本田")
+    console.log(cars);
+    cars.shift();
+    console.log(cars);
+
+    console.log(cars.toString());
+    var str = cars.join("-");
+    console.log(str+"-----"+typeof str);
+
+    var incars = ["宝骏","长城"];
+    var allcars = cars.concat(incars);
+    console.log(allcars);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

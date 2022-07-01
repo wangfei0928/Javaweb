@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function fn1(start,end){
+            var sum = 0;
+            for (let i = start; i <= end; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+        var number = fn1(1,100);
+        console.log(number);
+        
+        function fn2(num,start) {
+            num += start;
+            start++;
+            if (start > 100){
+                console.log(num);
+                return num;
+            }else {
+                fn2(num,start);
+            }
+        }
+
+        var fn = fn2(0,1);
+        console.log(fn);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

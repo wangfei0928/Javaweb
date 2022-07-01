@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var mm = new Map();
+        mm.set(1,"张三");
+        mm.set(2,"李四");
+        mm.set(3,"王五");
+        mm.set(4,"赵六");
+        console.log(mm.size);
+        var newVar = mm.get(1);
+        console.log(newVar);
+
+        var isHas = mm.has(7);
+        console.log(isHas);
+
+        mm.delete(2);
+        console.log("删除后的长度:"+mm.size);
+
+        //循环
+        for (var[k,v]of mm){
+            console.log("key"+k+"------"+"value"+v);
+        }
+
+        var ens = mm.entries();
+        console.log(ens);
+        for (var item of ens){
+            console.log("key"+item[0]+"------"+item[1]);
+        }
+
+        var keys = mm.keys();
+        for (var k of keys){
+            console.log("key:"+k+"value:"+mm.get(k));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

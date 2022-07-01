@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--定义一个函数，接收若干个（不固定数量）数值类型参数， 函数功能为计算这些数值的平均值，并返回-->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function avg() {
+            var length = arguments.length;
+            var sum = 0;
+            for (let i = 0; i < length; i++) {
+                sum += arguments[i];
+            }
+            var average = sum / length;
+            console.log(average);
+            return average;
+        }
+
+        avg(1,34,5,732,3);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function fn1(){
+            console.log("我是最简单的方法");
+        }
+
+        //方法中的形参不添加类型
+        function fn2(a,b){
+            console.log(a+"---"+b);
+        }
+        //js中没有方法重载,哪个方法函数写在最后，执行最后的函数
+        // function fn2(a,b,c){
+        //     console.log(a+"---"+b+"---"+c);
+        // }
+
+        function fn3(a,b){
+            return a+b;
+        }
+
+        function fn4(a){
+            if (a == 4){
+                console.log("helloword");
+                return;
+            }
+            console.log(4);
+        }
+        fn1();
+        fn2(3,6);
+        fn2("张三",);
+        var fn = fn3(5,6);
+        console.log(fn);
+        console.log(fn4(4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

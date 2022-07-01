@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var phone = "18834803580"
+        var myreg = /^[1][3,4,5,7,8,9][0-9]{9}$/;  //正则表达式
+
+        var f= myreg.test(phone);
+        console.log(f);
+
+        var str = "dsafhgwnx";
+        var replace = str.replace("a","d");
+        console.log(replace)
+
+        var str2 = "agwetg124hnfad";
+        console.log(str2.replace(/\d/g,"z"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

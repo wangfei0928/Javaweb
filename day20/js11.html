@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function fn1() {
+            var length = arguments.length;
+            console.log(length);
+            for (let i = 0;i<length;i++){
+                console.log(arguments[i]);
+            }
+        }
+        fn1(1,"tt");
+
+        +function fn2(){
+            console.log("我是一个自调用方法");
+        }();
+
+        +function fn3(a,b){
+            if (a>b){
+                console.log("a大");
+            }else {
+                console.log("b大");
+            }
+
+        }(4,2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
