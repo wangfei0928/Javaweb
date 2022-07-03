@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function add() {
+            //给div中添加一个p段落
+            var p = document.createElement("p");
+            p.innerText = "鹅鹅鹅";
+            var parent = document.getElementById("dd");
+            parent.appendChild(p);
+
+        }
+
+        function add2() {
+            //给div中添加一个p段落
+            var img = document.createElement("img");
+            img.src = "zm.jpg";
+            img.setAttribute("width","200px");
+            img.setAttribute("height","200px");
+            var parent = document.getElementById("dd");
+            parent.appendChild(img);
+
+        }
+    </script>
+</head>
+<body>
+<div id="dd"></div>
+<button id="btn" onclick="add()">添加元素</button>
+
+<div id="dd2"></div>
+<button id="btn2" onclick="add2()">添加元素</button>
+</body>
+</html>

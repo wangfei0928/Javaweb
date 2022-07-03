@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!-- 定义一个Student对象， 该对象有sname、age、sex、nickname、hobby几个属性-->
+  <!-- 构建数据，将班里所有学生的信息创建成对应的Student对象， 并将这些Student对象存储到数组中-->
+  <script>
+    class Student{
+        constructor(sname,age,sex,nickname,hobby) {
+            this.sname = sname;
+            this.age = age;
+            this.sex = sex;
+            this.nickname = nickname;
+            this.hobby = hobby;
+        }
+    }
+
+    let stu1 = new Student("张三","19","男","三三","java");
+    let stu2 = new Student("李四","14","女","小四","看电视");
+    let stu3 = new Student("王五","16","男","小五","看电影");
+    let stu4 = new Student("赵六","35","男","66","发呆");
+    let students = [stu1,stu2,stu3,stu4];
+
+    let i = 0;
+
+    function addStudent() {
+        if (i < students.length){
+            var table = document.getElementById("stu");
+            var tr = document.createElement("tr");
+            var name = document.createElement("td");
+            table.appendChild(tr);
+            tr.appendChild(name);
+            name.innerText = students[i].sname;
+
+            var age = document.createElement("td");
+            tr.appendChild(age);
+            age.innerText = students[i].age;
+
+            var sex = document.createElement("td");
+            tr.appendChild(sex);
+            sex.innerText = students[i].sex;
+
+            var nickname = document.createElement("td");
+            tr.appendChild(nickname);
+            nickname.innerText = students[i].nickname;
+
+            var hobby = document.createElement("td");
+            tr.appendChild(hobby);
+            hobby.innerText = students[i].hobby;
+
+            i++;
+        }else {
+            alert("添加完成");
+        }
+    }
+
+    function deleteStudent() {
+        if(i>0){
+            var table=document.getElementsByTagName("tr")[i];
+            console.log(table);
+            table.remove();
+            i--;
+        }else{
+            alert("当前无数据，请先添加");
+        }
+    }
+
+  </script>
+</head>
+<body>
+<table id="stu" border="1px">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>昵称</th>
+        <th>爱好</th>
+    </tr>
+</table>
+<button onclick="addStudent()">添加学生信息</button>
+<button onclick="deleteStudent()">删除学生信息</button>
+</body>
+</html>

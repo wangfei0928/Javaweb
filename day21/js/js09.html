@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload =function () {
+            var btn = document.getElementById("btn");
+            btn.addEventListener("click",function (e) {
+                console.log(e.target);
+                console.log(e.timeStamp);
+                console.log(e.type);
+            })
+
+        }
+    </script>
+</head>
+<body>
+<button id="btn">按钮一</button>
+</body>
+</html>

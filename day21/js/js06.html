@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var inp1 = document.getElementById("inp1");
+            inp1.addEventListener("blur",function () {
+                console.log("获取焦点");
+            });
+            inp1.addEventListener("focus",function () {
+                console.log("失去焦点了");
+            });
+
+            var inp2 = document.getElementById("inp2");
+            inp2.addEventListener("change",function () {
+                alert("改变");
+            });
+
+            var inp3 = document.getElementById("inp3");
+            /*inp3.onkeydown = function (event){
+                // if (event.keyCode == 13){
+                //     console.log("hh回车");
+                // }
+                alert(event.key);
+            }*/
+            inp3.addEventListener("keydown",function (event) {
+                alert(event.key);
+            })
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="inp1" name="name"><br>
+<input type="text" id="inp2" name="name"><br>
+<input type="text" id="inp3" name="name"><br>
+
+</body>
+</html>

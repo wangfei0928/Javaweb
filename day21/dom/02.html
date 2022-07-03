@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function do1() {
+            var div = document.querySelectorAll("#dd")[0];
+            div.innerText = "我是div新添的内容";
+        }
+
+        function do2(){
+            var div = document.querySelectorAll("#dd")[0];
+            div.style = "color:red";
+            div.style = "color:red;background-color:orange";
+        }
+
+        function do3(){
+            var img = document.querySelectorAll("img")[0];
+            img.src="zm.jpg";
+            img.setAttribute("src","zm.jpg");
+            img.setAttribute("width:500px")
+        }
+    </script>
+</head>
+<body>
+<div id="dd"><span style="color: #5bc0de">你好啊</span></div>
+<button onclick="do1()">给div填上内容</button><br>
+<button onclick="do2()">给div填上背景</button><br>
+<img src="dang.jpg" width="640" height="640" id="img"><br>
+<button onclick="do3()">修改图片大小</button><br>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+
+    <script>
+        
+        function edit() {
+            setTimeout(changeColor,3000);
+        }
+        
+        function changeColor() {
+            var divElement = document.querySelectorAll("div")[0];
+            divElement.style.backgroundColor = "yellow";
+        }
+
+    </script>
+</head>
+<body>
+<div></div>
+<button id="btn" onclick="edit()">改变颜色</button>
+</body>
+</html>

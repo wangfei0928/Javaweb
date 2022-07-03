@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function do1() {
+            var div = document.querySelector("#dd");
+            div.innerText = "我是div新添的内容";
+        }
+
+        function do2(){
+            var div = document.querySelector("#dd");
+            div.style = "color:red";
+            div.style = "color:red;background-color:orange";
+        }
+    </script>
+</head>
+<body>
+    <div id="dd"></div>
+    <button onclick="do1()">给div填上内容</button>
+    <button onclick="do2()">给div填上背景</button>
+</body>
+
+</html>

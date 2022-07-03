@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var inputs = document.querySelectorAll("input");
+            var spans = document.querySelectorAll("span");
+            var username = inputs[0];
+            username.addEventListener("blur",function () {
+                if (username.size>5){
+                    spans[0].innerText = "* 用户名不能小于5位";
+                    username.focus();
+                }else {
+                    spans[0].innerText = "*";
+                }
+            });
+
+            var repsw = inputs[2];
+            repsw.addEventListener("blur",function () {
+               var psw = inputs[1].value;  //第一次输入的密码
+                var repswvalue = repsw.value;
+               if (repswvalue != psw){
+                   spans[2].innerText = "* 两次密码不一致";
+                   repsw.focus();
+               }else {
+                   spans[2].innerText = "*";
+               }
+            });
+
+        }
+    </script>
+</head>
+<body>
+<h1 align="center">表单验证</h1>
+<form>
+    <table align="center">
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" id="username"><span style="color: red">*</span></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" id="password"><span style="color: red">*</span></td>
+        </tr>
+        <tr>
+            <td>重复密码:</td>
+            <td><input type="password" id="repassword"><span style="color: red">*</span></td>
+        </tr>
+        <tr>
+            <td>常用住址:</td>
+            <td><input type="text" id="address"></td>
+        </tr>
+        <tr>
+            <td>邮箱:</td>
+            <td><input type="text" id="email"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

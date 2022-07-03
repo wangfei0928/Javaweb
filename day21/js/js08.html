@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var in1 = document.getElementById("in1");
+            in1.addEventListener("select", function () {
+                alert("123");
+            })
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="text" id="in1">
+    <select id="sel">
+        <option>---请选择---</option>
+        <option>---男---</option>
+        <option>---女---</option>
+    </select>
+</body>
+</html>

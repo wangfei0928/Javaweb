@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn" onclick="alert('点击事件')">按钮一</button>
+    <button id="bt2" onclick=dianji() >按钮二</button>
+    <script>
+        function dianji() {
+            alert("我是点击事件");
+        }
+        var btn = document.getElementById("btn");  //得到id为btn这个元素的对象
+        //单击事件
+        /*btn.onclick = function () {
+            alert("大家好啊！");
+        }*/
+
+        //双击事件
+        /*btn.ondblclick = function () {
+            alert("你也好啊！")
+        }
+
+        btn.addEventListener("click",function (){
+            alert("大家好才是真的好");
+        })*/
+    </script>
+</body>
+</html>

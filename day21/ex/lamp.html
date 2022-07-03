@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+        }
+    </style>
+    <script>
+        function light() {
+            var div = document.getElementsByTagName("div")[0];
+            div.style.backgroundColor="yellow";
+        }
+        function shutdown() {
+            var div = document.getElementsByTagName("div")[0];
+            div.style.backgroundColor="grey";
+        }
+    </script>
+</head>
+<body>
+<div></div>
+<button onclick="light()">点亮</button>
+<button onclick="shutdown()">关闭</button>
+</body>
+</html>

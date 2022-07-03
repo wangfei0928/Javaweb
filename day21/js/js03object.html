@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var obj = Object.create(null);
+        obj.name = "张三";
+        obj.age = 13;
+        obj.sex = "男";
+        obj.study = function () {
+            console.log("好好学习");
+        }
+        console.log(obj.name);
+        obj.study();
+
+        var Teacher = {
+            tname:"王老师",
+            teach:function () {
+                console.log(this.tname+"教书育人");
+            }
+        }
+
+        var t1 = Object.create(Teacher);
+        t1.tname = "李老师";
+        t1.teach();
+
+        var t2 = Object.create(Teacher);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

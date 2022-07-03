@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var my = document.getElementById("mydiv");
+            console.log(my.innerText);
+
+            var ps = document.getElementsByTagName("p");
+            for (let i = 0; i < ps.length; i++) {
+                console.log(ps[i].innerText);
+            }
+
+            var ccs = document.getElementsByClassName("cc");
+            console.log(ccs);
+
+            var element = document.querySelector("#mydiv");
+            console.log(element);
+            var nodeListOf = document.querySelectorAll("p");
+            console.log(nodeListOf);
+            var elementNodeListOf = document.querySelectorAll(".cc");
+            console.log(elementNodeListOf)
+        }
+    </script>
+</head>
+<body>
+<div id="mydiv" class="cc">我是一个div</div>
+<p class="cc">段落一</p>
+<p>段落二</p>
+</body>
+</html>

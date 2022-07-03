@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <!-- 定义表格的表头 -->
+    <table id="stu" border="1">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>昵称</th>
+            <th>爱好</th>
+        </tr>
+    </table>
+
+    <button id="b1" onclick="add();">添加</button><!-- 添加“添加”按钮，add()是当点击按钮时进行的方法 -->
+    <button id="b2" onclick="del();">删除</button><!-- 添加“删除”按钮，del()是当点击按钮时进行的方法 -->
+</div>
+<script>
+    // 定义一个Student对象， 该对象有sname、age、sex、nickname、hobby几个属性
+    function Student(sname,age,sex,nickname,hobby){
+        this.sname=sname;
+        this.age=age;
+        this.sex=sex;
+        this.nickname=nickname;
+        this.hobby=hobby;
+    }
+    //构建数据，将班里所有学生的信息创建成对应的Student对象， 并将这些Student对象存储到数组中
+    var stu1=new Student("张三",18,"男","小张","玩游戏");
+    var stu2=new Student("张四",17,"女","小四","看电视");
+    var stu3=new Student("张五",19,"男","小五","看电影");
+    var stu4=new Student("张六",20,"女","小六","听音乐");
+    var stu5=new Student("张七",16,"男","小七","发呆");
+    var stus=[stu1,stu2,stu3,stu4,stu5];
+    var i=0;
+
+    function add(){
+        if(i<stus.length){
+            var table=document.getElementById("stu");//找到表格
+            var tr=document.createElement('tr');//创建tr(表格的行)
+            var name=document.createElement("td");//创建td(表格的列)
+            table.appendChild(tr);//向表格里添加行
+            tr.appendChild(name);//向表格新建的行添加列
+            name.innerText=stus[i].sname;//往新建的列添加数据
+
+            var age=document.createElement("td");
+            tr.appendChild(age);
+            age.innerText=stus[i].age;
+
+            var sex=document.createElement("td");
+            tr.appendChild(sex);
+            sex.innerText=stus[i].sex;
+
+            var name1=document.createElement("td");
+            tr.appendChild(name1);
+            name1.innerText=stus[i].nickname;
+
+            var hobby=document.createElement("td");
+            tr.appendChild(hobby);
+            hobby.innerText=stus[i].hobby;
+
+            i++;
+        }else{
+            alert("添加完毕");
+        }
+    }
+    function del(){
+        if(i>0){
+            var table=document.getElementsByTagName("tr")[i];//获得标签tr的数组中的第i个tr
+            table.remove();
+            i--;
+        }else{
+            alert("以删完")
+        }
+    }
+
+</script>
+</body>
+</html>

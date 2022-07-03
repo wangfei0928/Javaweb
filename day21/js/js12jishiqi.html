@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="dd"></div>
+<button onclick="shut()">停止</button>
+<script>
+    function calTime() {
+        var date = new Date();
+        var hh = date.getHours();
+        var mm = date.getMinutes();
+        var ss = date.getSeconds();
+        var StringTime = hh+":"+mm+":"+ss;
+
+        // var div = document.getElementById("dd");
+        dd.innerText = StringTime;
+    }
+    var interval = setInterval("calTime()",1000);
+
+    function shut() {
+        window.clearInterval(interval);//定时的时间清除
+    }
+</script>
+</body>
+</html>

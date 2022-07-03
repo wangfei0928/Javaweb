@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        #d2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+    <script>
+        window.onload =function (){
+            var d1 = document.getElementById("d1");
+            d1.addEventListener("mouseenter",function () {
+                alert("我进去咯");
+            });
+
+            d1.addEventListener("mouseover",function (){
+                alert("over 我又进来了");
+            });
+            d1.addEventListener("mouseleave",function (){
+                alert("我出去了！");
+            });
+
+        }
+    </script>
+</head>
+<body>
+<div id="d1">
+    <div id="d2"></div>
+</div>
+</body>
+</html>
