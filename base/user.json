@@ -1,0 +1,12 @@
+{
+    "code":0,
+    "msg":"",
+    "count":1000,
+    "data":[
+             {"id":"1001","username":"张三","email":"123@qq.com","sex":"男","city":"浙江杭州","sign":"人生恰似一场修行","img":"../img/test.png"},
+             {"id":"1002","username":"张三","email":"123@qq.com","sex":"男","city":"浙江杭州","sign":"人生恰似一场修行","img":"../img/test2.jpg"},
+             {"id":"1003","username":"张三","email":"123@qq.com","sex":"男","city":"浙江杭州","sign":"人生恰似一场修行","img":"../img/zm.jpg"}
+    ]
+}
+
+

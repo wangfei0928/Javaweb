@@ -1,0 +1,12 @@
+{
+    "code":0,
+    "msg":"",
+    "count":5,
+    "data":[
+             {"id":"1001","rolename":"班主任","remark":"我是班主任"},
+             {"id":"1002","rolename":"班长","remark":"我是班长"},
+             {"id":"1003","rolename":"学习委员","remark":"我是学习委员"}
+    ]
+}
+
+

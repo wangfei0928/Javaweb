@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+<table class="layui-hide" id="demo"></table>
+<script type="text/html" id="imgTpl">
+    <img src="{{d.img }}">
+
+</script>
+<style type="text/css">
+    .layui-table-cell{
+        text-align:center;
+        height: auto;
+        white-space: normal;
+    }
+
+    .layui-table img{
+        max-width:100px
+    }
+</style>
+
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        //展示已知数据
+        table.render({
+            elem: '#demo'
+            ,url:'user.json'
+            ,page:true
+            ,style:"height:200"
+            ,cols: [[ //标题栏
+                {field: 'id', title: 'ID', width: 80, sort: true}
+                ,{field: 'username', title: '用户名', width: 120}
+                ,{field: 'email', title: '邮箱', width: 150}
+                ,{field: 'sign', title: '签名', width: 330}
+                ,{field: 'sex', title: '性别', width: 80}
+                ,{field: 'city', title: '城市', width: 100}
+                ,{field: 'img', title: '图片',  width: 380, templet:"#imgTpl"}
+            ]]
+
+            // ,skin: 'line' //表格风格
+            ,even: true
+            // ,page: true //是否显示分页
+            //,limits: [5, 7, 10]
+            //,limit: 5 //每页默认显示的数量
+        });
+    });
+</script>
+
+</body>
+</html>

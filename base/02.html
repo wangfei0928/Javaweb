@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+<div class="layui-form">
+  <div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">中文版</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
+      </div>
+    </div>
+    <div class="layui-inline">
+      <label class="layui-form-label">国际版</label>
+      <div class="layui-input-inline">
+        <input type="text" class="layui-input" id="test1-1" placeholder="yyyy-MM-dd">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  layui.use('laydate', function() {
+    var laydate = layui.laydate;
+
+    //常规用法
+    laydate.render({
+      elem: '#test1'
+    });
+
+    //国际版
+    laydate.render({
+      elem: '#test1-1'
+      , lang: 'en'
+    });
+
+    //年选择器
+    laydate.render({
+      elem: '#test2'
+      , type: 'year'
+    });
+
+    //年月选择器
+    laydate.render({
+      elem: '#test3'
+      , type: 'month'
+    });
+
+    //时间选择器
+    laydate.render({
+      elem: '#test4'
+      , type: 'time'
+    });
+
+    //日期时间选择器
+    laydate.render({
+      elem: '#test5'
+      , type: 'datetime'
+    });
+
+    //日期范围
+    laydate.render({
+      elem: '#test6'
+      //设置开始日期、日期日期的 input 选择器
+      //数组格式为 2.6.6 开始新增，之前版本直接配置 true 或任意分割字符即可
+      , range: ['#test-startDate-1', '#test-endDate-1']
+    });
+  });
+    </script>
+</body>
+</html>

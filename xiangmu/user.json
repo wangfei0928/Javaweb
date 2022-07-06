@@ -1,0 +1,12 @@
+{
+    "code":0,
+    "msg":"",
+    "count":5,
+    "data":[
+             {"id":"1001","username":"张三","email":"123@qq.com","sex":"男","city":"浙江杭州"},
+             {"id":"1002","username":"张三","email":"123@qq.com","sex":"男","city":"浙江杭州"},
+             {"id":"1003","username":"张三","email":"123@qq.com","sex":"男","city":"浙江杭州"}
+    ]
+}
+
+

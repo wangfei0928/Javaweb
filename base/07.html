@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.js"></script>
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+    <legend>常规用法</legend>
+</fieldset>
+
+<div id="test1" class="demo-tree demo-tree-box"></div>
+
+<script>
+    layui.use(['tree', 'util'], function(){
+        var tree = layui.tree
+            ,layer = layui.layer
+            ,util = layui.util
+            ,$ = layui.jquery;
+
+        $.ajax({
+            url:"tree.json",
+            method:"get",
+            // async:false,   将异步请求改为同步请求
+            dataType:"json",
+            success:function (data1) {
+                //常规用法
+                tree.render({
+                    elem: '#test1' //默认是点击节点可进行收缩
+                    ,data: data1
+                });
+            }
+        });
+
+    })
+
+
+
+</script>
+</body>
+</html>
